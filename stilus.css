@@ -1,20 +1,109 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    max-width: 800px;
-    width: 80%;
+body {
+  max-width: 800px;
+  width: 80%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
 }
-.tarolo{
+h1 {
+  color: #333;
+}
+.tarolo {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
 }
 
-@media screen and (max-width: 500px) {
-    .tarolo{
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  padding: 6px;
+  font-size: 16px;
+  width: 60%;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button,
+.ok-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ok-button {
+  margin-left: 10px;
+}
+
+.ok-button:hover {
+  background-color: #0056b3;
+}
+
+.feedback {
+  font-size: 18px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.correct::after {
+  content: "✔";
+  color: green;
+}
+
+.incorrect::after {
+  content: "✘";
+  color: red;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .tarolo {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 20px;
     }
-}
 
+    h1 {
+        font-size: 1.5rem;
+    }
 
+    input[type="text"] {
+        width: 100%;
+        max-width: none;
+    }
+
+    .ok-button {
+        width: 100%;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+} 

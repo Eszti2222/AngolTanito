@@ -18,14 +18,16 @@ export default class Kerdesek{
             
         }
     }
-
     kever(){
         
     }
-    /*esemeny(){
-        this.#pontszamElem= 
+    esemeny(){
+        window.addEventListener("kivalaszt",(event)=>{
+            console.log(event.detail)
+            new Kerdes(event.detail,document.querySelector(".kivalasztott"))
+        })
         
 
-    }*/
+    }
 
 }

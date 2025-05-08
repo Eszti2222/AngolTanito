@@ -7,9 +7,9 @@ export default class Kerdes{
 constructor(obj,szElem,index){
     this.#obj=obj;
     this.#szElem=szElem;
-    this.#index=index;
+    this.#index=obj.id;
     this.megjelenit();
-    this.#gombElem=document.querySelector("button")
+    this.#gombElem=document.querySelector(".mondat:last-child button")
     this.esemenykezelo();
 
 }
@@ -20,7 +20,7 @@ megjelenit(){
         <p>Alap: ${this.#obj.alap}</p>
         <p>valasztas: ${this.#obj.valasztas} </p>
         <input type="text">
-        <button>OK</button>
+        <button class="kivalaszt">OK</button>
 
         </div>
         `
